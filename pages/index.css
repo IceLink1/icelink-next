@@ -1,0 +1,105 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  position: relative;
+}
+.homeSection {
+  width: 100%;
+  height: 83vh;
+  overflow-y: hidden;
+}
+.homeContainer .main {
+  border: solid 1px #222;
+  background: #00000013;
+  padding: 2rem;
+  max-width: 100%;
+  width: 70vw;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2rem;
+}
+h2.subheader {
+  font-size: 2vw;
+}
+.homeContainer {
+  perspective: 1200px;
+  transform-style: preserve-3d;
+  animation: cinematic-camera 7s cubic-bezier(0.6, 0, 0.4, 1) both;
+}
+@keyframes cinematic-camera {
+  from {
+    perspective-origin: 60% 40%;
+  }
+  to {
+    perspective-origin: 0% 60%;
+  }
+  from,
+  to {
+    opacity: 1;
+  }
+  25%,
+  75% {
+    opacity: 1;
+  }
+}
+.homeContainer .main {
+  transform-origin: top center;
+  transform-style: preserve-3d;
+  animation: inherit;
+  animation-name: cinematic;
+}
+.homeContainer .main img {
+  display: block;
+  transform-style: preserve-3d;
+  animation: inherit;
+  animation-name: image-pop;
+  border-radius: 100px;
+  border: solid 2px #222;
+}
+@keyframes image-pop {
+  70%,
+  100% {
+    transform: translate3d(0, 0, 60px);
+  }
+}
+.homeContainer .main > img:last-of-type {
+  animation-delay: 4s;
+}
+
+@keyframes cinematic {
+  from {
+    transform: translateZ(-200px) rotateY(30deg) translateY(50vh);
+  }
+  to {
+    transform: translateZ(-100px) rotateY(-30deg) translateY(-80%)
+      translateY(75vh);
+  }
+}
+
+@media (max-width: 800px) {
+  .homeSection {
+    height: auto;
+    overflow: scroll;
+  }
+  .homeContainer .main {
+    grid-template-columns: 1fr;
+    animation: none;
+  }
+  .homeContainer .main img {
+    width: 100%;
+  }
+  .homeContainer .main img:last-of-type {
+    animation-delay: 0s;
+  }
+  .homeContainer .main {
+    width: 100%;
+  }
+  .homeContainer {
+    perspective: 800px;
+  }
+  .homeContainer .main img {
+    animation: none;
+  }
+}
