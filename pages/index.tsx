@@ -1,3 +1,5 @@
+"use client";
+
 import { Link } from "@heroui/link";
 import { button as buttonStyles } from "@heroui/theme";
 import "./index.css";
@@ -7,8 +9,20 @@ import { siteConfig } from "@/config/site";
 import DefaultLayout from "@/layouts/default";
 import { TypeAnimation } from "react-type-animation";
 import Image from "next/image";
+import { useEffect } from "react";
+import { addToast } from "@heroui/react";
 
 export default function IndexPage() {
+  useEffect(() => {
+    addToast({
+      title: "Cookies",
+      description: "We using cookies to improve your experience",
+      timeout: 5000,
+      shouldShowTimeoutProgress: true,
+      color: "success",
+    });
+  }, []);
+
   return (
     <DefaultLayout>
       <div className="App">
