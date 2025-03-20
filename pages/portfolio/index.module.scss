@@ -1,4 +1,4 @@
-.tag-list {
+.tagList {
   width: 100%;
   display: flex;
   flex-shrink: 0;
@@ -8,7 +8,7 @@
   overflow: hidden;
 }
 
-.loop-slider {
+.loopSlider {
   --direction: normal;
   --duration: 30s;
   .inner {

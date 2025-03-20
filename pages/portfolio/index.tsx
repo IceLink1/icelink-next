@@ -1,6 +1,6 @@
 import DefaultLayout from "@/layouts/default";
 import { Card, CardHeader, CardFooter, Image, Button } from "@heroui/react";
-import "./index.scss";
+import cl from "./index.module.scss";
 import { title } from "process";
 import Link from "next/link";
 
@@ -78,11 +78,11 @@ export default function DocsPage() {
   return (
     <DefaultLayout>
       <section className="flex flex-col">
-        <div className="tag-list">
-          <div className="loop-slider">
-            <div className="inner">
+        <div className={cl.tagList}>
+          <div className={cl.loopSlider}>
+            <div className={cl.inner}>
               {tech.map((item, i) => (
-                <div className="tag" key={i}>
+                <div className={cl.tag} key={i}>
                   <span>#</span> <span>{item}</span>
                 </div>
               ))}

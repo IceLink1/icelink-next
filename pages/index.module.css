@@ -1,9 +1,9 @@
-*,
+/* *,
 *:before,
 *:after {
   box-sizing: border-box;
   position: relative;
-}
+} */
 .homeSection {
   width: 100%;
   height: 83vh;
