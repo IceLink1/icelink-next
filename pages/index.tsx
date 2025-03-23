@@ -2,7 +2,7 @@
 
 import { Link } from "@heroui/link";
 import { button as buttonStyles } from "@heroui/theme";
-import  cl from "@/pages/index.module.css";
+import cl from "@/pages/index.module.css";
 import img from "@/public/images/salohiddin.jpg";
 
 import { siteConfig } from "@/config/site";
@@ -21,11 +21,15 @@ export default function IndexPage() {
       shouldShowTimeoutProgress: true,
       color: "success",
     });
+   
   }, []);
 
   return (
     <DefaultLayout>
-      <section className={`flex flex-col items-center justify-center ${cl.homeSection}`}>
+      <div id="yandex_rtb_R-A-14678797-1"></div>
+      <section
+        className={`flex flex-col items-center justify-center ${cl.homeSection}`}
+      >
         <div className="flex gap-3">
           <div className={cl.homeContainer}>
             <main className={cl.main}>

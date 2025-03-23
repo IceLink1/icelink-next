@@ -16,6 +16,8 @@ export const Head = () => {
         name="viewport"
       />
       <link href="/" rel="icon" />
+      {/* <script>window.yaContextCb=window.yaContextCb||[]</script>
+      <script src="https://yandex.ru/ads/system/context.js" async></script> */}
     </NextHead>
   );
 };
