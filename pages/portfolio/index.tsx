@@ -73,12 +73,21 @@ export default function DocsPage() {
       image: "https://iili.io/3xiwfFj.png",
       techStack: ["Html", "Css", "Rest Api", "JavaScript"],
     },
+    {
+      title: "icelink-chat",
+      description: "I very much using this chat",
+      repositoryUrl: "https://github.com/IceLink1/icelink-chat/tree/main",
+      demoUrl: "https://icelink-chat.onrender.com/",
+      image: "https://iili.io/3TdGdD7.png",
+      techStack: ["Vite", "React.js", "Redux", "RTK", "Tailwind", "Socket.io"],
+    },
   ];
 
   return (
     <DefaultLayout>
       <section className="flex flex-col">
         <div className={cl.tagList}>
+          <h1>My Stack</h1>
           <div className={cl.loopSlider}>
             <div className={cl.inner}>
               {tech.map((item, i) => (
@@ -93,8 +102,8 @@ export default function DocsPage() {
           {projects.map((project, i) => (
             <>
               <Card isFooterBlurred className="w-full h-80">
-                <CardHeader className="bg-black/40 absolute z-10 top-1 flex-col items-start">
-                  <p className="text-tiny text-white/60 uppercase font-bold">
+                <CardHeader className="bg-black/40 absolute z-10 top-1 flex-col items-start ">
+                  <p className="text-tiny text-white/60  uppercase font-bold bg-indigo-700 p-2  rounded-md">
                     {project.techStack.join(", ")}
                   </p>
                   <h4 className="text-white/90 font-medium text-xl">

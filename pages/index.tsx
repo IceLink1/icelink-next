@@ -21,12 +21,10 @@ export default function IndexPage() {
       shouldShowTimeoutProgress: true,
       color: "success",
     });
-   
   }, []);
 
   return (
     <DefaultLayout>
-      <div id="yandex_rtb_R-A-14678797-1"></div>
       <section
         className={`flex flex-col items-center justify-center ${cl.homeSection}`}
       >
