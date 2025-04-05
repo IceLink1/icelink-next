@@ -85,7 +85,7 @@ export default function DocsPage() {
 
   return (
     <DefaultLayout>
-      <section className="flex flex-col">
+      <section className="flex flex-col ">
         <div className={cl.tagList}>
           <h1>My Stack</h1>
           <div className={cl.loopSlider}>
@@ -98,7 +98,7 @@ export default function DocsPage() {
             </div>
           </div>
         </div>
-        <div className="grid grid-cols-3 gap-4 pt-5 max-lg:grid-cols-2 max-md:grid-cols-1">
+        <div className="grid grid-cols-3 gap-4 pt-5 max-lg:grid-cols-2 max-md:grid-cols-1 px-6">
           {projects.map((project, i) => (
             <>
               <Card isFooterBlurred className="w-full h-80">

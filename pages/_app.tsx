@@ -7,16 +7,19 @@ import { useRouter } from "next/router";
 import { fontSans, fontMono } from "@/config/fonts";
 import "@/styles/globals.css";
 import { ToastProvider } from "@heroui/react";
+import { ParallaxProvider } from "react-scroll-parallax";
 
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
 
   return (
     <HeroUIProvider navigate={router.push}>
-      <NextThemesProvider>
-        <ToastProvider />
-        <Component {...pageProps} />
-      </NextThemesProvider>
+      <ParallaxProvider>
+        <NextThemesProvider>
+          <ToastProvider />
+          <Component {...pageProps} />
+        </NextThemesProvider>
+      </ParallaxProvider>
     </HeroUIProvider>
   );
 }

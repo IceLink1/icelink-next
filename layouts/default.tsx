@@ -29,7 +29,7 @@ export default function DefaultLayout({
       />
       <Head />
       <Navbar />
-      <main className="container mx-auto max-w-7xl px-6 flex-grow width-full">
+      <main className="container mx-auto max-w-7xl flex-grow width-full">
         {children}
       </main>
       <footer className={`w-full flex items-center justify-center py-3 `}>
