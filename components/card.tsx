@@ -8,6 +8,7 @@ import {
   Button,
   addToast,
 } from "@heroui/react";
+import confetti from 'canvas-confetti';
 
 type TypeCardProps = {
   text: string;
@@ -27,6 +28,17 @@ export default function MyCard({
   const [isLiked, setIsLiked] = React.useState(false);
   const [collLikes, setCollLikes] = React.useState(likes);
 
+
+  const handleConfetti = () => {
+    confetti({
+      angle: 190,
+      particleCount: 300,
+      spread: 360,
+      origin: { x: 0.5, y: 0.5 },
+      colors: ["#FF0000", "#00FF00", "#0000FF"],
+    });
+  };
+
   const handlerLike = () => {
     setIsLiked(!isLiked);
     setCollLikes(isLiked ? collLikes - 1 : collLikes + 1);
@@ -38,14 +50,18 @@ export default function MyCard({
           shouldShowTimeoutProgress: true,
           color: "warning",
         })
-      : addToast({
+      : (addToast({
           title: "Your like added :)",
           description: "Thanks",
           timeout: 2000,
           shouldShowTimeoutProgress: true,
           color: "success",
-        });
+        }) ,
+        handleConfetti())
   };
+
+
+
 
   return (
     <Card className="max-w-[400px] ">

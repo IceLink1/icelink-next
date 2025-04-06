@@ -22,6 +22,7 @@
     "@heroui/system": "2.4.12",
     "@heroui/theme": "2.4.12",
     "@react-aria/visually-hidden": "3.8.20",
+    "canvas-confetti": "^1.9.3",
     "clsx": "2.1.1",
     "framer-motion": "11.13.1",
     "intl-messageformat": "^10.5.0",
@@ -36,6 +37,7 @@
     "styled-components": "^6.1.17"
   },
   "devDependencies": {
+    "@types/canvas-confetti": "^1.9.0",
     "@types/node": "20.5.7",
     "@types/react": "18.3.3",
     "@types/react-dom": "18.3.0",

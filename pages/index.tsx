@@ -5,6 +5,7 @@ import { button as buttonStyles } from "@heroui/theme";
 import cl from "@/pages/index.module.css";
 import img from "@/public/images/icelink.jpg";
 import alpha from "@/public/icons/alpha.svg";
+import connection from "@/public/images/icelink-connection.png";
 
 import { siteConfig } from "@/config/site";
 import DefaultLayout from "@/layouts/default";
@@ -24,29 +25,19 @@ import {
 import { Parallax, ParallaxBanner, useParallax } from "react-scroll-parallax";
 import Loader from "@/components/loader/Loader";
 import Techs from "@/components/techs";
+import hh from "@/public/icons/hh.png";
+import tg from "@/public/icons/tg.png";
+import linked from "@/public/icons/linked.png";
+import github from "@/public/icons/github.png";
 
 export default function IndexPage() {
-
-
-    const projects = [
-      {
-        title: "icelink-connection",
-        description: "is't a platform like facebook",
-        repositoryUrl: "https://github.com/IceLink1/icelink-connection",
-        demoUrl: "https://connection.icelink.uz",
-        image: "https://iili.io/3x6VPs4.png",
-        techStack: ["React", "Express.js", "MongoDB", "Redux"],
-      },
-      {
-        title: "icelink-movies",
-        description: "Some thing like Netflix",
-        repositoryUrl: "https://github.com/IceLink1/movio",
-        demoUrl: "https://ice-movio.vercel.app/",
-        image: "https://iili.io/3xioJLb.png",
-        techStack: ["Vite", "React.js", "Redux", "RTK", "Tailwind"],
-      },
-
-    ];
+  const project = {
+    title: "icelink-connection",
+    description: "is't a platform like facebook",
+    repositoryUrl: "https://github.com/IceLink1/icelink-connection",
+    demoUrl: "https://connection.icelink.uz",
+    techStack: ["React", "Express.js", "MongoDB", "Redux"],
+  };
 
   const [isSumbitted, setIsSubmitted] = React.useState(false);
   useEffect(() => {
@@ -98,24 +89,57 @@ export default function IndexPage() {
                 src={img}
                 alt="icelink"
               />
-              <h1 className="text-4xl font-bold text-center">
-                Hello, I am{" "}
-                <span className="text-blue-500">
-                  <IndexPage.Text />
-                </span>
-              </h1>
-              <p className="mt-4 text-lg text-gray-600"></p>
+              <p className=" p-4 text-lg text-gray-600">
+                Приветик бро,
+                <br /> меня зовут Салохиддин и я веб-разработчик, и не смотря на
+                мой возраст я хорошо шарю в цифравых штучках
+              </p>
+              <div className={`grid grid-cols-4 gap-4 px-4 ${cl.links}`}>
+                <Link isExternal href={siteConfig.links.github}>
+                  <Button
+                    className="bg-gradient-to-tr from-pink-500 to-yellow-500 text-white shadow-lg"
+                    radius="full"
+                  >
+                    <Image src={github} alt="github" />
+                  </Button>
+                </Link>
+                <Link isExternal href={siteConfig.links.telegram}>
+                  <Button
+                    className="bg-gradient-to-tr from-pink-500 to-yellow-500 text-white shadow-lg"
+                    radius="full"
+                  >
+                    <Image src={tg} alt="tg" />
+                  </Button>
+                </Link>
+                <Link isExternal href={siteConfig.links.hh}>
+                  <Button
+                    className="bg-gradient-to-tr from-pink-500 to-yellow-500 text-white shadow-lg"
+                    radius="full"
+                  >
+                    <Image src={hh} alt="hh" />
+                  </Button>
+                </Link>
+                <Link isExternal href={siteConfig.links.linkedin}>
+                  <Button
+                    className="bg-gradient-to-tr from-pink-500 to-yellow-500 text-white shadow-lg"
+                    radius="full"
+                  >
+                    <Image src={linked} alt="linkedin" />
+                  </Button>
+                </Link>
+              </div>
             </CardFooter>
           </Card>
           <Card className={`${cl.card}`}>
             <CardFooter className="flex-col">
               <h1 className="text-3xl font-bold text-center">Experience</h1>
               <p className="mt-4 text-lg text-gray-600 h-full flex items-center gap-3">
-                <Image src={alpha} alt="train" /> 
-                "Экосистема Альфа" 
+                <Image src={alpha} alt="train" />
+                "Экосистема Альфа"
               </p>
               <p className="mt-4 text-lg text-gray-600 h-full">
-              Данный момент я работаю в этой компании
+                Текущая место работы, <br /> где я работаю в качестве
+                Frontend-разработчика
               </p>
             </CardFooter>
           </Card>
@@ -128,8 +152,52 @@ export default function IndexPage() {
               </p>
             </CardFooter>
           </Card>
-          <Card className={`${(cl.card, cl.projects)}`}>
-            <CardFooter></CardFooter>
+          <Card className={`p-4 gap-4 ${(cl.card, cl.projects)}`}>
+            <div className="flex flex-wrap gap-6 max-lg:grid grid-cols-2 max-md:flex flex-col">
+              <div>
+                <h1 className="text-3xl font-bold text-center">
+                  Icelink Connection
+                </h1>
+                <Link href="https://connection.icelink.uz">
+                  <Image src={connection} alt="icelink-connection" />
+                </Link>
+              </div>
+              <div className="flex flex-wrap gap-6 max-lg:gap-4  ">
+                <p>
+                  Icelink Connection - это платформа, которая объединяет
+                  различных пользователей, чтобы общаться вместе.{" "}
+                  <i>"Да идия сварована из facebook"</i>
+                </p>
+                <div>
+                  {" "}
+                  <h2>Tech stack:</h2>
+                  <p className="flex gap-2">
+                    {project.techStack.map((e, i) => (
+                      <p key={i}>{e}</p>
+                    ))}
+                  </p>
+                </div>
+                <Link href="https://github.com/IceLink1/icelink-connection">
+                  <Button
+                    className="bg-gradient-to-tr from-pink-500 to-yellow-500 text-white shadow-lg"
+                    radius="full"
+                  >
+                    Source code
+                  </Button>
+                </Link>
+                <div className="flex align-center gap-4">
+                  <p>More projects in my</p>
+                  <Link href="/portfolio">
+                    <Button
+                      className="bg-gradient-to-tr from-pink-500 to-yellow-500 text-white shadow-lg"
+                      radius="full"
+                    >
+                      Portfolio
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+            </div>
           </Card>
         </section>
 
@@ -173,7 +241,7 @@ export default function IndexPage() {
               <CardFooter></CardFooter>
             </Card> */}
             <div className={cl.form}>
-              <Card className={`w-2/3 ${cl.card}`}>
+              <Card className={`w-2/3 max-md:w-full ${cl.card}`}>
                 <Form onSubmit={onSubmit} className="flex flex-col gap-4 ">
                   <Input
                     isRequired
@@ -210,47 +278,6 @@ export default function IndexPage() {
     </DefaultLayout>
   );
 }
-
-// <Link
-// isExternal
-// className={buttonStyles({
-//   variant: "bordered",
-//   radius: "full",
-// })}
-// href={siteConfig.links.github}
-// >
-// GitHub
-// </Link>
-// <Link
-// isExternal
-// className={`${buttonStyles({
-//   variant: "bordered",
-//   radius: "full",
-// })} bg-blue-700`}
-// href={siteConfig.links.telegram}
-// >
-// Telegram
-// </Link>
-// <Link
-// isExternal
-// className={`${buttonStyles({
-//   variant: "bordered",
-//   radius: "full",
-// })} bg-red-700`}
-// href={siteConfig.links.hh}
-// >
-// HH
-// </Link>
-// <Link
-// isExternal
-// className={`${buttonStyles({
-//   variant: "bordered",
-//   radius: "full",
-// })} bg-blue-500`}
-// href={siteConfig.links.linkedin}
-// >
-// Linked In
-// </Link>
 
 IndexPage.Text = function () {
   return (
