@@ -30,8 +30,6 @@ import tg from "@/public/icons/tg.png";
 import linked from "@/public/icons/linked.png";
 import github from "@/public/icons/github.png";
 import Puls from "@/components/puls";
-import Moon from "@/components/moon";
-import confetti from "canvas-confetti";
 
 export default function IndexPage() {
   const project = {
@@ -83,15 +81,7 @@ export default function IndexPage() {
     return Math.random() * (max - min) + min;
   }
 
-  setInterval(() => {
-    confetti({
-      angle: randomInRange(55, 125),
-      spread: randomInRange(45, 190),
-      particleCount: randomInRange(50, 70),
-      origin: { y: 1 },
-      colors: ["#FF0000", "#00FF00", "#0000FF"],
-    });
-  }, 10000);
+
 
   return (
     <DefaultLayout>
@@ -295,19 +285,19 @@ export default function IndexPage() {
         {/* Portals */}
         <>
           <Parallax
-            translateX={["0px", "200px"]}
-            translateY={["0px", "-300px"]}
+           translateX={["0px", "-200px"]}
+           translateY={["100px", "-300px"]}
             className="absolute top-2/3 left-1/3 p-8 bg-gray-900/75 rounded-3xl "
           >
             <Puls />
           </Parallax>
-          <Parallax
+          {/* <Parallax
             translateX={["0px", "-200px"]}
             translateY={["100px", "-300px"]}
             className="absolute top-1/3 left-2/3 p-8 bg-gray-900/75 rounded-3x"
           >
-            <>1 + 1 = 10</>
-          </Parallax>
+            1 + 1 = 10
+          </Parallax> */}
         </>
       </main>
     </DefaultLayout>
