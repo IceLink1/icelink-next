@@ -148,9 +148,9 @@ export default function IndexPage() {
           <Card className={`${cl.card}`}>
             <CardFooter className="flex-col">
               <h1 className="text-3xl font-bold text-center">Tech Stack</h1>
-              <p className="mt-4 text-lg text-gray-600 h-full">
+              <div className="mt-4 text-lg text-gray-600 h-full">
                 <Techs />
-              </p>
+              </div>
             </CardFooter>
           </Card>
           <Card className={`p-4 gap-4 ${(cl.card, cl.projects)}`}>
@@ -264,7 +264,7 @@ export default function IndexPage() {
                     errorMessage="Please enter a valid message"
                   />
 
-                  <Button type="submit" variant="solid">
+                  <Button  variant="solid">
                     Submit
                   </Button>
                 </Form>

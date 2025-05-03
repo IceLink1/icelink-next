@@ -6,31 +6,10 @@ html,
 body {
   margin: 0;
   padding: 0;
-  --grid-color: rgba(65, 65, 65, 0.3);
-  background-image: linear-gradient(var(--grid-color) 1px, transparent 1px),
+  --grid-color: rgba(108, 108, 108, 0.481);
+  background-image: 
+    linear-gradient(var(--grid-color) 1px, transparent 1px),
     linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
   background-size: 50px 50px;
-  animation: animateGrid 20s infinite ease-in-out;
   box-sizing: border-box;
-}
-
-@keyframes animateGrid {
-  0% {
-    --grid-color: rgba(65, 65, 65, 0.3);
-  }
-  20% {
-    --grid-color: rgba(190, 3, 0, 0.3);
-  }
-  40% {
-    --grid-color: rgba(65, 65, 65, 0.3);
-  }
-  60% {
-    --grid-color: rgba(2, 190, 137, 0.3);
-  }
-  80% {
-    --grid-color: rgba(65, 65, 65, 0.3);
-  }
-  100% {
-    --grid-color: rgba(152, 186, 1, 0.3);
-  }
 }
