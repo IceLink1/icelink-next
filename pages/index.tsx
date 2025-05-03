@@ -29,7 +29,7 @@ import hh from "@/public/icons/hh.png";
 import tg from "@/public/icons/tg.png";
 import linked from "@/public/icons/linked.png";
 import github from "@/public/icons/github.png";
-import Puls from "@/components/puls";
+import Pulse from "@/components/pulse";
 
 export default function IndexPage() {
   const project = {
@@ -289,7 +289,7 @@ export default function IndexPage() {
            translateY={["100px", "-300px"]}
             className="absolute top-2/3 left-1/3 p-8 bg-gray-900/75 rounded-3xl "
           >
-            <Puls />
+            <Pulse />
           </Parallax>
           {/* <Parallax
             translateX={["0px", "-200px"]}
