@@ -263,6 +263,7 @@ export default function IndexPage() {
                     className="resize-none"
                     errorMessage="Please enter a valid message"
                   />
+
                   <Button type="submit" variant="solid">
                     Submit
                   </Button>
