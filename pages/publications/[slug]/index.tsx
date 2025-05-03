@@ -33,11 +33,12 @@ type Post = {
 
 export default function PostPage() {
   const router = useRouter();
-  const { slug } = router.query;
+  const { slug: postId } = router.query;
   const [post, setPost] = useState<Post | null>(null);
   const [newComment, setNewComment] = useState('');
 
   useEffect(() => {
+    if (!postId) return;
     // In a real app, fetch post data from an API
     // For now, we'll use mock data
     const mockPosts: Post[] = [
@@ -87,11 +88,11 @@ export default function PostPage() {
       }
     ];
 
-    const foundPost = mockPosts.find(p => p.slug === slug);
+    const foundPost = mockPosts.find(p => p.id === Number(postId));
     if (foundPost) {
       setPost(foundPost);
     }
-  }, [slug]);
+  }, [postId]);
 
   const handleLike = () => {
     if (!post) return;

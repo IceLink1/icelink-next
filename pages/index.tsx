@@ -1,7 +1,6 @@
 "use client";
 
 import { Link } from "@heroui/link";
-import { button as buttonStyles } from "@heroui/theme";
 import cl from "@/pages/index.module.css";
 import img from "@/public/images/icelink.jpg";
 import alpha from "@/public/icons/alpha.svg";
@@ -40,48 +39,43 @@ export default function IndexPage() {
     techStack: ["React", "Express.js", "MongoDB", "Redux"],
   };
 
-  const [isSumbitted, setIsSubmitted] = React.useState(false);
-  useEffect(() => {
-    const email = localStorage.getItem("email");
+  // const [isSumbitted, setIsSubmitted] = React.useState(false);
 
-    if (email !== "") {
-      setIsSubmitted(true);
-    } else {
-      addToast({
-        title: "Cookies",
-        description: "We using cookies to improve your experience",
-        timeout: 5000,
-        shouldShowTimeoutProgress: true,
-        color: "success",
-      });
-    }
-  }, []);
+  // useEffect(() => {
+  //   const email = localStorage.getItem("email");
 
-  const onSubmit = (e: any) => {
-    e.preventDefault();
+  //   if (email !== "") {
+  //     setIsSubmitted(true);
+  //   } else {
+  //     addToast({
+  //       title: "Cookies",
+  //       description: "We using cookies to improve your experience",
+  //       timeout: 5000,
+  //       shouldShowTimeoutProgress: true,
+  //       color: "success",
+  //     });
+  //   }
+  // }, []);
 
-    const data = Object.fromEntries(new FormData(e.currentTarget));
+  // const onSubmit = (e: any) => {
+  //   e.preventDefault();
 
-    addToast({
-      title: "Success",
-      description: `Your message has been sent, from ${e.currentTarget.email.value} to icelink39@gmail.com`,
-      timeout: 10000,
-      shouldShowTimeoutProgress: true,
-      color: "success",
-    });
+  //   const data = Object.fromEntries(new FormData(e.currentTarget));
 
-    localStorage.setItem("email", e.currentTarget.email.value);
-    localStorage.setItem("message", e.currentTarget.message.value);
-    e.currentTarget.reset();
+  //   addToast({
+  //     title: "Success",
+  //     description: `Your message has been sent, from ${e.currentTarget.email.value} to icelink39@gmail.com`,
+  //     timeout: 10000,
+  //     shouldShowTimeoutProgress: true,
+  //     color: "success",
+  //   });
 
-    setIsSubmitted(true);
-  };
+  //   localStorage.setItem("email", e.currentTarget.email.value);
+  //   localStorage.setItem("message", e.currentTarget.message.value);
+  //   e.currentTarget.reset();
 
-  function randomInRange(min: number, max: number) {
-    return Math.random() * (max - min) + min;
-  }
-
-
+  //   setIsSubmitted(true);
+  // };
 
   return (
     <DefaultLayout>
@@ -249,7 +243,7 @@ export default function IndexPage() {
             </Card> */}
             <div className={cl.form}>
               <Card className={`w-2/3 max-md:w-full ${cl.card}`}>
-                <Form onSubmit={onSubmit} className="flex flex-col gap-4 ">
+                <Form onSubmit={() => null} className="flex flex-col gap-4 ">
                   <Input
                     isRequired
                     errorMessage="Please enter a valid email"
@@ -269,13 +263,9 @@ export default function IndexPage() {
                     className="resize-none"
                     errorMessage="Please enter a valid message"
                   />
-                  {isSumbitted ? (
-                    <Chip color="success">You message has been sent</Chip>
-                  ) : (
-                    <Button type="submit" variant="solid">
-                      Submit
-                    </Button>
-                  )}
+                  <Button type="submit" variant="solid">
+                    Submit
+                  </Button>
                 </Form>
               </Card>
             </div>
@@ -285,8 +275,8 @@ export default function IndexPage() {
         {/* Portals */}
         <>
           <Parallax
-           translateX={["0px", "-200px"]}
-           translateY={["100px", "-300px"]}
+            translateX={["0px", "-200px"]}
+            translateY={["100px", "-300px"]}
             className="absolute top-2/3 left-1/3 p-8 bg-gray-900/75 rounded-3xl "
           >
             <Pulse />
