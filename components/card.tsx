@@ -64,7 +64,7 @@ export default function MyCard({
 
 
   return (
-    <Card className="max-w-[400px] ">
+    <Card className="max-w-[400px] " >
       <CardHeader className="justify-between">
         <div className="flex gap-5 ">
           <Avatar
