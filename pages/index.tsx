@@ -4,7 +4,7 @@ import { Link } from "@heroui/link";
 import cl from "@/pages/index.module.css";
 import img from "@/public/images/icelink.jpg";
 import alpha from "@/public/icons/alpha.svg";
-import connection from "@/public/images/icelink-connection.png";
+import beeline from "@/public/images/beeline.png";
 
 import { siteConfig } from "@/config/site";
 import DefaultLayout from "@/layouts/default";
@@ -16,7 +16,6 @@ import {
   Button,
   Card,
   CardFooter,
-  Chip,
   Form,
   Input,
   Textarea,
@@ -91,9 +90,7 @@ export default function IndexPage() {
                 alt="icelink"
               />
               <p className=" p-4 text-lg text-gray-600">
-                Приветик бро,
-                <br /> меня зовут Салохиддин и я веб-разработчик, и не смотря на
-                мой возраст я хорошо шарю в цифравых штучках
+                {siteConfig.subDescription}
               </p>
               <div className={`grid grid-cols-4 gap-4 px-4 ${cl.links}`}>
                 <Link isExternal href={siteConfig.links.github}>
@@ -133,17 +130,7 @@ export default function IndexPage() {
           </Card>
 
           <Card className={`${cl.card}`}>
-            <CardFooter className="flex-col">
-              <h1 className="text-3xl font-bold text-center">Experience</h1>
-              <p className="mt-4 text-lg text-gray-600 h-full flex items-center gap-3">
-                <Image src={alpha} alt="train" />
-                "Экосистема Альфа"
-              </p>
-              <p className="mt-4 text-lg text-gray-600 h-full">
-                Текущая место работы, <br /> где я работаю в качестве
-                Frontend-разработчика
-              </p>
-            </CardFooter>
+            <CardFooter className="flex-col"></CardFooter>
           </Card>
           <Card className={`${cl.card}`}>
             <CardFooter className="flex-col">
@@ -154,49 +141,38 @@ export default function IndexPage() {
             </CardFooter>
           </Card>
           <Card className={`p-4 gap-4 ${(cl.card, cl.projects)}`}>
-            <div className="flex flex-wrap gap-6 max-lg:grid grid-cols-2 max-md:flex flex-col">
+            <div>
               <div>
-                <h1 className="text-3xl font-bold text-center">
-                  Icelink Connection
-                </h1>
-                <Link href="https://connection.icelink.uz">
-                  <Image src={connection} alt="icelink-connection" />
-                </Link>
-              </div>
-              <div className="flex flex-wrap gap-6 max-lg:gap-4  ">
-                <p>
-                  Icelink Connection - это платформа, которая объединяет
-                  различных пользователей, чтобы общаться вместе.{" "}
-                  <i>"Да идия сварована из facebook"</i>
+                <h1 className="text-3xl font-bold text-center">Experience</h1>
+                <p className="mt-4 text-lg text-gray-600 h-full flex items-center gap-3">
+                  <Image src={alpha} alt="alpha" className="w-12 h-12" />
+                  "Ecosystem Alpha"
                 </p>
-                <div>
-                  {" "}
-                  <h2>Tech stack:</h2>
-                  <p className="flex gap-2">
-                    {project.techStack.map((e, i) => (
-                      <p key={i}>{e}</p>
-                    ))}
-                  </p>
-                </div>
-                <Link href="https://github.com/IceLink1/icelink-connection">
-                  <Button
-                    className="bg-gradient-to-tr from-pink-500 to-yellow-500 text-white shadow-lg"
-                    radius="full"
-                  >
-                    Source code
-                  </Button>
-                </Link>
-                <div className="flex align-center gap-4">
-                  <p>More projects in my</p>
-                  <Link href="/portfolio">
-                    <Button
-                      className="bg-gradient-to-tr from-pink-500 to-yellow-500 text-white shadow-lg"
-                      radius="full"
-                    >
-                      Portfolio
-                    </Button>
-                  </Link>
-                </div>
+                <p className="mt-4 text-lg text-gray-600 h-full">
+                  2023 - 2025 where I work as a Java software engineer, use
+                  Spring Boot with Hibernate, and some time i do frontend with
+                  Next.js. I make services for my company, we make a big micro
+                  services architecture. I use Docker and Kubernetes for
+                  deployment, and write unit tests with JUnit. I also use GitLab
+                  CI/CD for continuous integration and deployment.
+                </p>
+              </div>
+              <div className="mt-4">
+                <h1 className="text-3xl font-bold text-center">Internship</h1>
+                <p className="mt-4 text-lg text-gray-600 h-full flex items-center gap-3">
+                  <Image
+                    src={beeline}
+                    alt="beeline"
+                    className="w-12 h-12 rounded-full"
+                  />
+                  "Beeline"
+                </p>
+                <p className="mt-4 text-lg text-gray-600 h-full">
+                  2022 - 2023 I work as a full-stack software engineer. I use
+                  Node.js with Express.js, and some time i do frontend with
+                  Next.js. I make services for my company, and learn new
+                  technologies.
+                </p>
               </div>
             </div>
           </Card>
@@ -222,15 +198,7 @@ export default function IndexPage() {
           <Card className={`mx-6 ${cl.card}`}>
             <CardFooter>
               <p className="mt-4 text-lg text-gray-600">
-                Yo bro! I’m Salohiddin 😎 I do web dev stuff– makin’ cool and
-                useful web apps. Super into coding and love buildin’ things that
-                work fast, look clean, and just feel nice to use. Yeah, I’m
-                kinda new to the game, but I’m grindin’ on my own projects to
-                show I know my tools. I mess with HTML, CSS, JS, React, Next.js,
-                TypeScript, Node, Express, Mongo, Postgres – all that good
-                stuff. Frontend, backend – doesn’t matter. I can do the full
-                thing, from makin’ buttons to runnin’ servers and databases.
-                Let’s build some dope stuff 🚀
+                {siteConfig.description}
               </p>
             </CardFooter>
           </Card>
@@ -264,9 +232,7 @@ export default function IndexPage() {
                     errorMessage="Please enter a valid message"
                   />
 
-                  <Button  variant="solid">
-                    Submit
-                  </Button>
+                  <Button variant="solid">Submit</Button>
                 </Form>
               </Card>
             </div>

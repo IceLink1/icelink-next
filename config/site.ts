@@ -2,10 +2,12 @@ export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
   name: "ICELINK",
-  description: `Yo bro! I’m Salohiddin 😎 I do web dev stuff– makin’ cool and useful web apps. Super into coding and love buildin’ things that work fast, look clean, and just feel nice to use`,
+  description: `Yo bro! I’m Salohiddin 😎 and i write backend in Java, mostly with Spring Boot. I work with microservices, Kafka, PostgreSQL, Redis, all running in Kubernetes. I focus on performance optimization 🚀, remove bottlenecks, and speed up CI/CD pipelines. I implement caching, set up metrics, and fix tricky bugs. I care about clean, readable code and production stability. Not a fan of duct tape solutions — I prefer systems that run smoothly and make sense.
+  `,
+  subDescription: ``,
   keywords:
     "iceLink , salihiddin , mirxafizov , icelink, salohiddin mirxafizov, salohiddin mirxafizov portfolio, icelink portfolio, Icelink ,icelink39 ,ICELINK portfolio ,Salohiddin Mirxafizov,salax , mirhofizov,   ",
-  icon: "https://avatars.githubusercontent.com/u/177216990?s=400&u=85d90a005291c4f6df0c9ff0bd2ec023486ff1fa&v=4",
+  icon: "https://avatars.githubusercontent.com/u/163158076?s=400&u=6f4385bf6e2c9b12c22b3479efeb700d3a796e7a&v=4",
   navItems: [
     {
       label: "Home",
