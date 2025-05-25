@@ -51,7 +51,6 @@ export const Navbar = () => {
           <Link
             className="flex justify-start items-center gap-1"
             href="/"
-            isExternal
           >
             <Logo />
             <p className="font-bold text-inherit">ICELINK</p>

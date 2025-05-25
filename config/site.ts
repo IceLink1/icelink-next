@@ -4,7 +4,7 @@ export const siteConfig = {
   name: "ICELINK",
   description: `Yo bro! I’m Salohiddin 😎 and i write backend in Java, mostly with Spring Boot. I work with microservices, Kafka, PostgreSQL, Redis, all running in Kubernetes. I focus on performance optimization 🚀, remove bottlenecks, and speed up CI/CD pipelines. I implement caching, set up metrics, and fix tricky bugs. I care about clean, readable code and production stability. Not a fan of duct tape solutions — I prefer systems that run smoothly and make sense.
   `,
-  subDescription: ``,
+  subDescription: `I’m really into computer science love figuring out how things work under the hood. Programming’s kinda my thing: it’s fun, frustrating, and super satisfying when stuff finally works.`,
   keywords:
     "iceLink , salihiddin , mirxafizov , icelink, salohiddin mirxafizov, salohiddin mirxafizov portfolio, icelink portfolio, Icelink ,icelink39 ,ICELINK portfolio ,Salohiddin Mirxafizov,salax , mirhofizov,   ",
   icon: "https://avatars.githubusercontent.com/u/163158076?s=400&u=6f4385bf6e2c9b12c22b3479efeb700d3a796e7a&v=4",

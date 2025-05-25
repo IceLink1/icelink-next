@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+$black-color: #18181a;
+$white-color: #faf2e7;
+$primary-color: #b41799;
+$secondary-color: #5ea2ef;
+$tertiary-color: #0072f5;
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  --grid-color: rgba(108, 108, 108, 0.481);
+  background-image: linear-gradient(var(--grid-color) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+  background-size: 50px 50px;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  ::selection {
+    background-color: $primary-color;
+    color: #fff;
+  }
+}

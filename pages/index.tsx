@@ -1,7 +1,7 @@
 "use client";
 
 import { Link } from "@heroui/link";
-import cl from "@/pages/index.module.css";
+import cl from "@/pages/index.module.scss";
 import img from "@/public/images/icelink.jpg";
 import alpha from "@/public/icons/alpha.svg";
 import beeline from "@/public/images/beeline.png";
@@ -30,6 +30,40 @@ import github from "@/public/icons/github.png";
 import Pulse from "@/components/pulse";
 
 export default function IndexPage() {
+  const tech = [
+    "Typescript",
+    "Next.js",
+    "React",
+    "JavaScript",
+    "ReactNative",
+    "Node.js",
+    "Next",
+    "Express.js",
+    "Nest",
+    "CSS",
+    "MongoDB",
+    "PostgreSQL",
+    "GraphQL",
+    "RESTAPI",
+    "SASS",
+    "HTML",
+    "JavaScript",
+    "Typescript",
+    "Next.js",
+    "React",
+    "ReactNative",
+    "Express.js",
+    "Next",
+    "MongoDB",
+    "Node.js",
+    "Nest",
+    "GraphQL",
+    "RESTAPI",
+    "SASS",
+    "CSS",
+    "HTML",
+    "PostgreSQL",
+  ];
   const project = {
     title: "icelink-connection",
     description: "is't a platform like facebook",
@@ -202,13 +236,24 @@ export default function IndexPage() {
               </p>
             </CardFooter>
           </Card>
+
+          <div className={cl.loopSlider}>
+            <div className={cl.inner}>
+              {tech.map((item, i) => (
+                <div className={cl.tag} key={i}>
+                  <span>#</span> <span>{item}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
           <div className={`mx-6 ${cl.resume}`}>
-            {/* <Card className={` ${cl.card}`}>
+            <Card className={` ${cl.card}`}>
               <CardFooter></CardFooter>
             </Card>
             <Card className={` ${cl.card}`}>
               <CardFooter></CardFooter>
-            </Card> */}
+            </Card>
             <div className={cl.form}>
               <Card className={`w-2/3 max-md:w-full ${cl.card}`}>
                 <Form onSubmit={() => null} className="flex flex-col gap-4 ">
