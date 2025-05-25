@@ -14,10 +14,6 @@ export const siteConfig = {
       href: "/",
     },
     {
-      label: "Portfolio",
-      href: "/portfolio",
-    },
-    {
       label: "Blog",
       href: "/blog",
     },
@@ -30,10 +26,6 @@ export const siteConfig = {
     {
       label: "Home",
       href: "/",
-    },
-    {
-      label: "Portfolio",
-      href: "/portfolio",
     },
     {
       label: "Blog",

@@ -32,7 +32,7 @@ export default function DefaultLayout({
       <main className="container mx-auto max-w-7xl flex-grow width-full">
         {children}
       </main>
-      <footer className={`w-full flex items-center justify-center py-3 `}>
+      <footer className={`w-full flex items-center justify-center py-3`}>
         <h1>
           copyright &copy; {new Date().getFullYear()} | Created by ICELINK
         </h1>

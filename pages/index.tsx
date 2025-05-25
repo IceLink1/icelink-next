@@ -31,46 +31,67 @@ import Pulse from "@/components/pulse";
 
 export default function IndexPage() {
   const tech = [
+    "Java",
+    "Spring",
     "Typescript",
-    "Next.js",
-    "React",
-    "JavaScript",
-    "ReactNative",
-    "Node.js",
     "Next",
-    "Express.js",
+    "RabbitMQ",
     "Nest",
-    "CSS",
+    "JUnit",
+    "Git",
+    "Jira",
+    "Postman",
     "MongoDB",
     "PostgreSQL",
     "GraphQL",
     "RESTAPI",
-    "SASS",
-    "HTML",
-    "JavaScript",
-    "Typescript",
-    "Next.js",
-    "React",
-    "ReactNative",
-    "Express.js",
-    "Next",
-    "MongoDB",
+    "Docker",
+    "Kubernetes",
+    "GitLab",
+    "Jenkins",
+    "AWS",
+    "JWT",
+    "Socket.io",
+    "Hibernate",
     "Node.js",
+    "Redis",
+    "Kafka",
+    "Bcrypt",
+
+    "Java",
+    "Spring",
+    "Typescript",
+    "Next",
+    "RabbitMQ",
     "Nest",
+    "JUnit",
+    "Git",
+    "Jira",
+    "Postman",
+    "MongoDB",
+    "PostgreSQL",
     "GraphQL",
     "RESTAPI",
-    "SASS",
-    "CSS",
-    "HTML",
-    "PostgreSQL",
+    "Docker",
+    "Kubernetes",
+    "GitLab",
+    "Jenkins",
+    "AWS",
+    "JWT",
+    "Socket.io",
+    "Hibernate",
+    "Node.js",
+    "Redis",
+    "Kafka",
+    "Bcrypt",
   ];
-  const project = {
-    title: "icelink-connection",
-    description: "is't a platform like facebook",
-    repositoryUrl: "https://github.com/IceLink1/icelink-connection",
-    demoUrl: "https://connection.icelink.uz",
-    techStack: ["React", "Express.js", "MongoDB", "Redux"],
-  };
+  // const project = {
+  //   title: "icelink-connection",
+  //   description: "is't a platform like facebook",
+  //   repositoryUrl: "https://github.com/IceLink1/icelink-connection",
+  //   demoUrl: "https://connection.icelink.uz",
+  //   techStack: ["React", "Express.js", "MongoDB", "Redux"],
+  // };
 
   // const [isSumbitted, setIsSubmitted] = React.useState(false);
 
@@ -163,8 +184,17 @@ export default function IndexPage() {
             </CardFooter>
           </Card>
 
-          <Card className={`${cl.card}`}>
-            <CardFooter className="flex-col"></CardFooter>
+          <Card className={`${cl.card} flex items-center justify-center`}>
+            <CardFooter
+              className="flex-col items-start"
+              style={{ height: "70%" }}
+            >
+              <h1 className="text-3xl font-bold text-center">
+                Hi bro, my name is{" "}
+                <span className="text-blue-500">Salohiddin</span>, and I'm a
+              </h1>
+              <IndexPage.Text />
+            </CardFooter>
           </Card>
           <Card className={`${cl.card}`}>
             <CardFooter className="flex-col">
@@ -248,12 +278,12 @@ export default function IndexPage() {
           </div>
 
           <div className={`mx-6 ${cl.resume}`}>
-            <Card className={` ${cl.card}`}>
+            {/* <Card className={` ${cl.card}`}>
               <CardFooter></CardFooter>
             </Card>
             <Card className={` ${cl.card}`}>
               <CardFooter></CardFooter>
-            </Card>
+            </Card> */}
             <div className={cl.form}>
               <Card className={`w-2/3 max-md:w-full ${cl.card}`}>
                 <Form onSubmit={() => null} className="flex flex-col gap-4 ">
@@ -310,18 +340,18 @@ IndexPage.Text = function () {
   return (
     <TypeAnimation
       sequence={[
-        "Frotend Developer",
+        "Java Software Engineer",
         1000,
-        "Backend Developer",
+        "Full Stack Software Engineer",
         2000,
-        "Mobile Developer",
+        "Backend Developer",
         3000,
       ]}
-      wrapper="span"
+      wrapper="h1"
       cursor={false}
       repeat={Infinity}
       style={{
-        fontSize: "3vw",
+        fontSize: "2rem",
         display: "inline-block",
       }}
     />

@@ -9,7 +9,7 @@ import docker from "@/public/icons/docker-icon.svg";
 import k8s from "@/public/icons/Kubernetes_logo_without_workmark.svg";
 import hibernate from "@/public/icons/Hibernate.svg";
 import graphql from "@/public/icons/GraphQL.svg";
-import kafka from "@/public/icons/kafka.svg";
+import java from "@/public/icons/Java.svg";
 import sql from "@/public/icons/sql.svg";
 import spring from "@/public/icons/spring-icon.svg";
 
@@ -19,7 +19,12 @@ export default function Techs() {
       <Image
         className="max-w-16 min-w-10 min-h-10 max-h-16 object-cover"
         src={spring}
-        alt="webpack"
+        alt="spring"
+      />
+      <Image
+        className="max-w-16 min-w-10 min-h-10 max-h-16 object-cover"
+        src={java}
+        alt="java"
       />
       <Image
         className="max-w-16 min-w-10 min-h-10 max-h-16 object-cover"
@@ -29,54 +34,50 @@ export default function Techs() {
       <Image
         className="max-w-16 min-w-10 min-h-10 max-h-16 object-cover"
         src={nest}
-        alt="next"
+        alt="nest"
       />
       <Image
         className="max-w-16 min-w-10 min-h-10 max-h-16 object-cover"
         src={ts}
-        alt="react"
+        alt="ts"
       />
 
       <Image
         className="max-w-16 min-w-10 min-h-10 max-h-16 object-cover"
         src={graphql}
-        alt="nest"
+        alt="graphql"
       />
       <Image
         className="max-w-16 min-w-10 min-h-10 max-h-16 object-cover"
         src={sql}
-        alt="aws3"
+        alt="sql"
       />
       <Image
         className="max-w-16 min-w-10 min-h-10 max-h-16 object-cover"
         src={hibernate}
-        alt="js"
+        alt="hibernate"
       />
       <Image
         className="max-w-16 min-w-10 min-h-10 max-h-16 "
         src={aws3}
-        alt="ts"
+        alt="aws3"
       />
       <Image
         className="max-w-16 min-w-10 min-h-10 max-h-16 object-cover"
         src={postgres}
         alt="postgres"
       />
-      <Image
-        className="max-w-16 min-w-10 min-h-10 max-h-16 object-cover"
-        src={kafka}
-        alt="express"
-      />
+
       <Image
         className="max-w-16 min-w-10 min-h-10 max-h-16 object-cover"
         src={docker}
-        alt="sql"
+        alt="docker"
       />
 
       <Image
         className="max-w-16 min-w-10 min-h-10 max-h-16 object-cover"
         src={k8s}
-        alt="expo"
+        alt="k8s"
       />
     </div>
   );

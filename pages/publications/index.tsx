@@ -13,6 +13,7 @@ import {
 import { useState } from "react";
 import confetti from "canvas-confetti";
 import Link from "next/link";
+import { publications } from "@/config/posts";
 
 type Comment = {
   id: number;
@@ -38,56 +39,9 @@ type Post = {
 };
 
 export default function PublicationsPage() {
-  const [posts, setPosts] = useState<Post[]>([
-    {
-      id: 1,
-      slug: "nextjs-project-deployment",
-      title: "Next.js Project Deployment",
-      text: "Just deployed my new Next.js project! Check out the smooth animations and responsive design.",
-      content:
-        "# Next.js Project Deployment\n\nI'm excited to share my latest project built with Next.js! 🚀\n\n## Key Features\n\n- Smooth animations\n- Responsive design\n- Modern UI components\n\n```jsx\nconst MyComponent = () => {\n  return <div>Hello World!</div>;\n}\n```\n",
-      author: "@icelink39",
-      authorName: "IceLink",
-      likes: 42,
-      views: 156,
-      comments: [
-        {
-          id: 1,
-          text: "Looks amazing! Love the UI/UX",
-          author: "@webdev",
-          authorName: "WebDev",
-          timestamp: "2 hours ago",
-        },
-      ],
-      tags: ["webdev", "nextjs", "frontend"],
-      createdAt: "2024-01-10T12:00:00Z",
-    },
-    {
-      id: 2,
-      slug: "microservices-architecture",
-      title: "Microservices Architecture with Docker and Kubernetes",
-      text: "Working on a new microservices architecture. Docker + Kubernetes makes everything better!",
-      content:
-        "# Microservices Architecture with Docker and Kubernetes\n\n## Introduction\n\nIn this post, I'll share my experience setting up a microservices architecture using Docker and Kubernetes.\n\n### Benefits\n\n1. Scalability\n2. Maintainability\n3. Deployment flexibility\n\n```yaml\napiVersion: v1\nkind: Pod\nmetadata:\n  name: example\n```\n",
-      author: "@icelink39",
-      authorName: "IceLink",
-      likes: 89,
-      views: 234,
-      comments: [
-        {
-          id: 1,
-          text: "Great stack choice!",
-          author: "@devops",
-          authorName: "DevOps",
-          timestamp: "1 hour ago",
-        },
-      ],
-      tags: ["docker", "kubernetes", "microservices"],
-      createdAt: "2024-01-09T15:30:00Z",
-    },
-  ]);
+  const [posts, setPosts] = useState<Post[]>(publications);
 
-  const [newComment, setNewComment] = useState("");
+  // const [newComment, setNewComment] = useState("");
 
   const handleLike = (postId: number) => {
     setPosts(
@@ -134,39 +88,39 @@ export default function PublicationsPage() {
     }
   };
 
-  const handleComment = (postId: number) => {
-    if (!newComment.trim()) return;
+  // const handleComment = (postId: number) => {
+  //   if (!newComment.trim()) return;
 
-    setPosts(
-      posts.map((post) => {
-        if (post.id === postId) {
-          return {
-            ...post,
-            comments: [
-              ...post.comments,
-              {
-                id: post.comments.length + 1,
-                text: newComment,
-                author: "@user",
-                authorName: "User",
-                timestamp: "Just now",
-              },
-            ],
-          };
-        }
-        return post;
-      })
-    );
+  //   setPosts(
+  //     posts.map((post) => {
+  //       if (post.id === postId) {
+  //         return {
+  //           ...post,
+  //           comments: [
+  //             ...post.comments,
+  //             {
+  //               id: post.comments.length + 1,
+  //               text: newComment,
+  //               author: "@user",
+  //               authorName: "User",
+  //               timestamp: "Just now",
+  //             },
+  //           ],
+  //         };
+  //       }
+  //       return post;
+  //     })
+  //   );
 
-    setNewComment("");
-    addToast({
-      title: "Comment added!",
-      description: "Your comment has been posted",
-      timeout: 2000,
-      shouldShowTimeoutProgress: true,
-      color: "success",
-    });
-  };
+  //   setNewComment("");
+  //   addToast({
+  //     title: "Comment added!",
+  //     description: "Your comment has been posted",
+  //     timeout: 2000,
+  //     shouldShowTimeoutProgress: true,
+  //     color: "success",
+  //   });
+  // };
 
   return (
     <DefaultLayout>
@@ -239,7 +193,12 @@ export default function PublicationsPage() {
                       passHref
                       legacyBehavior
                     >
-                      <Button color="primary" radius="full" size="sm">
+                      <Button
+                        color="primary"
+                        radius="full"
+                        size="sm"
+                        onClick={() => handleShare(post)}
+                      >
                         Read More
                       </Button>
                     </Link>
