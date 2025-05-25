@@ -2,11 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-$black-color: #18181a;
+/* $black-color: #18181a;
 $white-color: #faf2e7;
 $primary-color: #b41799;
 $secondary-color: #5ea2ef;
-$tertiary-color: #0072f5;
+$tertiary-color: #0072f5; */
 
 html,
 body {
@@ -19,7 +19,7 @@ body {
   box-sizing: border-box;
   overflow-x: hidden;
   ::selection {
-    background-color: $primary-color;
+    background-color: #b41799;
     color: #fff;
   }
 }

@@ -1,7 +1,7 @@
 "use client";
 
 import { Link } from "@heroui/link";
-import cl from "@/pages/index.module.scss";
+import cl from "@/pages/index.module.css";
 import img from "@/public/images/icelink.jpg";
 import alpha from "@/public/icons/alpha.svg";
 import beeline from "@/public/images/beeline.png";

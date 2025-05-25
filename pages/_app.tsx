@@ -5,7 +5,7 @@ import { ThemeProvider as NextThemesProvider } from "next-themes";
 import { useRouter } from "next/router";
 
 import { fontSans, fontMono } from "@/config/fonts";
-import "@/styles/globals.scss";
+import "@/styles/globals.css";
 import { ToastProvider } from "@heroui/react";
 import { ParallaxProvider } from "react-scroll-parallax";
 
