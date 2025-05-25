@@ -119,7 +119,7 @@ export default function PostPage() {
         <Card className="w-full">
           <CardHeader className="justify-between">
             <div className="flex gap-4">
-              <div className="w-12 h-12">
+              <div className="w-12 h-12 ">
                 <Avatar
                   isBordered
                   radius="full"

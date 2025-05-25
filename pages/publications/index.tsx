@@ -130,12 +130,14 @@ export default function PublicationsPage() {
             <Card key={post.id} className="w-full">
               <CardHeader className="justify-between">
                 <div className="flex gap-5">
+                  <div className="h-12 w-12">
                   <Avatar
                     isBordered
                     radius="full"
                     size="md"
                     src="https://avatars.githubusercontent.com/u/177216990?s=400&u=85d90a005291c4f6df0c9ff0bd2ec023486ff1fa&v=4"
                   />
+                  </div>
                   <div className="flex flex-col gap-1 items-start justify-center">
                     <Link
                       href={`/publications/${post.id}`}

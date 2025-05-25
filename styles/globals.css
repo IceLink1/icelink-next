@@ -18,8 +18,8 @@ body {
   background-size: 50px 50px;
   box-sizing: border-box;
   overflow-x: hidden;
-  ::selection {
-    background-color: #b41799;
-    color: #fff;
-  }
+}
+body ::selection {
+  background-color: #b41799;
+  color: #fff;
 }
